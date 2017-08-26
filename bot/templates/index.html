@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<title>Panickar's bot</title>
+	<link rel="stylesheet" type="text/css" href="{% static "bot/bot.css" %}" />
+	<!--<script src="{% static "bot/bot.js" %}"></script>-->
+</head>
+
+<body>
+<div class="chat-output" id="chat-output">
+  <div class="bot-message">
+    	<div class="message">{{ botMessage }}</div>
+  </div>
+  <div class="user-message" style="display:{{display}}">
+    	<div class="message">{{ userMessage}}        </div>
+  </div>
+</div>
+
+<div class="chat-input">
+  <form action="submit" id="user-input-form" method="post">
+    <input type="text" id="user-input" class="user-input" placeholder="Talk to the bot." name="userMessage" >
+  </form>
+</div>
+</body>
+
+</html>
+
+
+
+
